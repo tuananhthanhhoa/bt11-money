@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="dau-vao">
+    <select id="from-curency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+        <option value="EURO">EURO</option>
+    </select>
+    <br>
+    <br>
+    <input type="text"  id="dau-ra">
+    <select id="to-curency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+        <option value="EURO">EURO</option>
+    </select>
+    <button onclick="convertMoney()">chuyển đổi</button>
+</body>
+
+    <script>
+        function convertMoney () {
+            let moneyInput = document.getElementById('dau-vao');
+            let from = document.getElementById('from-curency');
+            let to = document.getElementById('to-curency')
+            let kq = 0;
+            kq = moneyInput.value * to.value / from.value;
+
+            document.getElementById('dau-ra').value = kq;
+        }
+    </script>
+
+</html>
